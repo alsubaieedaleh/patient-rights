@@ -1,0 +1,31 @@
+<div id="home" class="container">
+    <h1>حقوق المريض</h1>
+    <nav>
+      <button (click)="setActiveSection('about')" (click)="onClick1()" [ngClass]="{'active': isActive}">About</button>
+      <button (click)="setActiveSection('Quiz')" (click)="onClick2()" [ngClass]="{'active': isActive2}">Quiz</button>
+      <button (click)="setActiveSection('resources')" (click)="onClick3()" [ngClass]="{'active': isActive3}">Resources</button>
+      <button (click)="setActiveSection('contact')" (click)="onClick4()" [ngClass]="{'active': isActive4}">Contact</button>
+      
+    </nav>
+    <div class="line"></div>
+    <div id="content">
+      <div *ngIf="activeSection === 'about'" class="section">
+        <h2>About Patients' Rights</h2>
+        <p>Information about patients' rights...</p>
+      </div>
+      <div *ngIf="activeSection === 'Quiz'" class="section">
+        <h2>Articles</h2>
+        <p>Articles about patients' rights...</p>
+      </div>
+    
+      <div *ngIf="activeSection === 'resources'" class="section">
+        <h2>Resources</h2>
+        <p>Useful resources about patients' rights...</p>
+      </div>
+      <div *ngIf="activeSection === 'contact'" class="section">
+        <h2>Contact</h2>
+        <p>Contact information...</p>
+      </div>
+    </div>
+  </div>
+  

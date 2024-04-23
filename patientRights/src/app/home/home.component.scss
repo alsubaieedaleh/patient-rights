@@ -1,0 +1,119 @@
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9f9f9;
+  
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+    }
+  
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end; // Add this line
+  
+      button {
+        background-color: #37afb4;
+        color: #fff;
+        border: none;
+        border-radius: 19px 19px  3px 3px;
+        padding: 10px 30px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #6dbaba;
+        }
+      
+        &.active {
+          background-color: #ddecec; // This color will be applied when the button is clicked
+          color: #426f70;
+
+        }
+      
+        &::after {
+          background-color: #1a4141;
+        }
+}
+    }}
+
+
+     
+ 
+    #content {
+     .section {
+        
+        padding: 20px;
+        border-bottom: 3px solid #236b7f;
+        background-color: #ddecec;
+  
+        &.active {
+          display: block;
+        }
+  
+        h2 {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 10px;
+          color: #333;
+        }
+  
+        p {
+          font-size: 16px;
+          margin-bottom: 20px;
+          color: #666;
+        }
+      }
+    }
+  
+ 
+      
+      @media (max-width: 768px) {
+       // Mobile Styles
+.container {
+    padding: 20px;
+  
+    h1 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    nav {
+      display: flex;
+      flex-direction: row;
+      align-items: self-end;
+  
+      button {
+        padding: 5px 10px;
+        font-size: 17px;
+        font-weight: normal;
+        transition: background-color 0.3s ease;
+  
+      
+      }
+    }
+  
+  
+  
+    #content {
+      .section {
+        h2 {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+  
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+      }
