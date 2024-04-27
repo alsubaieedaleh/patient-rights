@@ -1,19 +1,26 @@
 import { CommonModule, NgIf } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import {QuizComponent} from '../quiz/quiz.component';
+import { AnalyticsService } from '../analytics.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  imports: [NgIf,CommonModule]
+  imports: [NgIf,CommonModule,QuizComponent]
 })
 export class HomeComponent {
-  activeSection: string = 'about';
+  constructor(private analyticsService: AnalyticsService) {}
+
+  trackEvent() {
+    this.analyticsService.sendEvent('button_click', { event_category: 'engagement', event_label: 'nav_buttons' });
+  }
+  activeSection: string = 'contact';
   isActive = false;
   isActive2 = false;
   isActive3 = false;
-  isActive4= false;
+  isActive4= true;
 
   onClick1() {
     this.isActive = true;

@@ -1,30 +1,160 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
 <div id="home" class="container">
-    <h1>حقوق المريض</h1>
+    <img src="assets/حق (1).png" alt="Patients' Rights" />
+    
     <nav>
-      <button (click)="setActiveSection('about')" (click)="onClick1()" [ngClass]="{'active': isActive}">About</button>
-      <button (click)="setActiveSection('Quiz')" (click)="onClick2()" [ngClass]="{'active': isActive2}">Quiz</button>
-      <button (click)="setActiveSection('resources')" (click)="onClick3()" [ngClass]="{'active': isActive3}">Resources</button>
-      <button (click)="setActiveSection('contact')" (click)="onClick4()" [ngClass]="{'active': isActive4}">Contact</button>
+      <button (click)="setActiveSection('about')" (click)="onClick1()" [ngClass]="{'active': isActive}">التواصل</button>
+      <button (click)="setActiveSection('Quiz')" (click)="onClick2()" [ngClass]="{'active': isActive2}">الاختبار</button>
+      <button (click)="setActiveSection('resources')" (click)="onClick3()" [ngClass]="{'active': isActive3}">المصادر</button>
+      <button (click)="setActiveSection('contact')" (click)="onClick4()" [ngClass]="{'active': isActive4}">عام</button>
       
     </nav>
-    <div class="line"></div>
     <div id="content">
       <div *ngIf="activeSection === 'about'" class="section">
-        <h2>About Patients' Rights</h2>
-        <p>Information about patients' rights...</p>
+        <h2>صاحب المبادرة: دالح السبيعي</h2>
+        <ul>
+            <li><i class="fas fa-envelope"></i> البريد الإلكتروني الشخصي: <a href="mailto:alsubaieedaleh@gmail.com">alsubaieedaleh&#64;gmail.com</a></li>
+            <li><i class="fab fa-linkedin"></i> حساب لينكدإن: <a href="https://www.linkedin.com/in/daleh-alsubaiee" target="_blank">daleh-alsubaiee</a></li>
+        </ul>
       </div>
       <div *ngIf="activeSection === 'Quiz'" class="section">
-        <h2>Articles</h2>
-        <p>Articles about patients' rights...</p>
+        <app-quiz></app-quiz>
       </div>
     
       <div *ngIf="activeSection === 'resources'" class="section">
-        <h2>Resources</h2>
-        <p>Useful resources about patients' rights...</p>
+        <h2>المصادر:</h2>
+        <p>
+         <a href="https://www.moh.gov.sa/awarenessplateform/Patientsrights/Pages/PatientsRights.aspx" target=”_blank” >- موقع ووزارة الصحة </a>  
+        </p>
+        <p>
+         <a href="https://www.moh.gov.sa/HealthAwareness/EducationalContent/HealthTips/Documents/Patient-Bill-of-Rights-and-Responsibilities.pdf" target=”_blank” >- وثيقة حقوق ومسؤوليات المرضى </a>  
+        </p>
+        <h2>ملخص الحقوق:
+            <br>
+            <ul>
+<li>
+
+    حق الوصول إلى الرعاية الصحية:
+    
+    يحق للمرضى الحصول على الرعاية الصحية اللازمة والمناسبة لحالتهم دون تمييز أو تأخير غير مبرر.
+    يجب أن يتم إعلام المرضى بالخدمات الصحية المتاحة وكيفية الوصول إليها.
+    يحق للمرضى اختيار مقدم الرعاية الصحية وفريق الرعاية المشارك في علاجهم.
+</li>
+            <li>
+
+                حق المعاملة اللائقة:
+                
+                يجب على مقدمي الرعاية الصحية التعامل مع المرضى بلطف واحترام وأخلاقية عالية.
+                يحق للمرضى أن يتلقوا معاملة عادلة ومتساوية بغض النظر عن جنسهم أو عرقهم أو دينهم أو أي خصائص شخصية أخرى.
+            </li>
+            <li>
+
+                حق المعلومات:
+                
+                يحق للمرضى الحصول على معلومات شاملة ومفهومة حول حالتهم الصحية وخيارات العلاج المتاحة.
+                يجب أن يتم توفير المعلومات بلغة يفهمها المريض، ويجب أن تشمل المخاطر والفوائد المحتملة للعلاجات المقترحة.
+            </li>
+                <li>
+
+                    حق صنع القرار:
+                    
+                    يحق للمرضى المشاركة في صنع القرارات المتعلقة برعايتهم الصحية، بما في ذلك الموافقة على الإجراءات الطبية المقترحة.
+                    يجب أن يتم توفير معلومات كافية ومفهومة للمرضى ليكونوا قادرين على اتخاذ قرار مستنير ومبني على معرفة.
+                </li>
+                    <li>
+
+                        حق الخصوصية والسرية:
+                        
+                        يجب أن يحافظ مقدمو الرعاية الصحية على خصوصية المرضى وسرية المعلومات الطبية الخاصة بهم.
+                        يحق للمرضى رفض مشاركة معلوماتهم الصحية مع أشخاص آخرين دون موافقتهم المسبقة.
+                        
+                    </li>
+                    <li>
+
+                        حق تقديم شكوى:
+                        
+                        يحق للمرضى تقديم شكوى إذا كانوا غير راضين عن جودة الرعاية التي تلقوها أو التعامل الذي تعاملوا به.
+                        يجب أن يتم توفير إجراءات سهلة ومناسبة لتقديم الشكاوى ومعالجتها بشكل عادل وفعال.
+                        
+                    </li>
+        </ul>
+            <br>
+        </h2>
       </div>
       <div *ngIf="activeSection === 'contact'" class="section">
-        <h2>Contact</h2>
-        <p>Contact information...</p>
+        <h2>مبادرة "حق" للتعريف بحقوق المريض التي كفلها له القانون.</h2>
+        <h2> يشهد مجال تقديم خدمات الرعاية الصحية للمرضى في المملكة العربية السعودية تطورًا مستمرًا بناءً على تعاليم الشريعة الإسلامية والأخلاق الاجتماعية التي تحدد سبل التعامل الإنساني والأخلاقي مع طالبي الخدمة.
+
+        </h2>
+<h2>هذه المبادرة تقدم أهم المصادر في هذا الموضوع وتدعو لإجراء الاختبار القصير في قسم "الاختبار" لاختبار معرفتهم بحقوقهم كيلا يغبنو فيها.</h2>
+        <h2>
+            
+            هذه الحقوق تشمل:
+            
+            <br>
+            1- حقوق المرضى وعائلاتهم
+            <br>
+            
+            2- حقوق المرضى الأطفال
+            <br>
+            
+            3- حقوق المرضى كبار السن
+            <br>
+            
+            4- حقوق المرضى ذوي الإعاقة
+            <br>
+            
+            5- حقوق مرضى السرطان
+            <br>
+            
+            6- حقوق مرضى الإيدز
+            
+            <br>
+            7- حقوق المرضى النفسيين
+            <br>
+        
+            
+            8- حقوق مرضى كوفيد-19
+            <br>
+            
+            9- حقوق صحة المرأة
+            <br>
+            
+            10- حقوق المرافقين
+            <br>
+            
+            11- حقوق الزوار
+            <br>
+            
+            12- مسؤوليات المرضى وأفراد عائلاتهم والمرافقين
+            <br>
+            
+            13- مسؤوليات الزوار
+            <br>
+            
+            14- حقوق المرضى في قسم الاستقبال
+            <br>
+            
+            15- حقوق المرضى في قسم المختبر
+            <br>
+            
+            16- حقوق المرضى في قسم الصيدلة
+            <br>
+            
+            17- حقوق المرضى في قسم الأشعة
+            <br>
+            
+            18- حقوق المرضى في العيادات
+            <br>
+            
+            19- حقوق المرضى في المرافق الخاصة</h2>
+            <br>
+          
       </div>
     </div>
   </div>

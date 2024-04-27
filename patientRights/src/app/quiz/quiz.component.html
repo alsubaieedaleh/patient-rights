@@ -1,0 +1,22 @@
+<!-- quiz.component.html -->
+<div class="quiz-container">
+    <div *ngIf="currentQuestionIndex < questions.length">
+      <h2>{{ questions[currentQuestionIndex].question }}</h2>
+      <ul>
+        <li *ngFor="let option of questions[currentQuestionIndex].options">
+          <label>
+            <input type="radio" [value]="option" (change)="onSelectAnswer(option)" [checked]="selectedAnswer === option">
+            {{ option }}
+          </label>
+        </li>
+      </ul>
+      <button (click)="onSubmitAnswer()">السؤال التالي</button>
+    </div>
+    <div *ngIf="currentQuestionIndex === questions.length">
+      <h2> النتيجة</h2>
+      <p>درجتك {{ score }} من أصل {{ questions.length }}.</p>
+      <p> إذا كانت درحتك أقل من 7 يرجى الاطلاع على ملخص الحقوق في المصادر ثم إعادة الاختبار</p>
+      <button (click)="restartQuiz()">أعد الاختبار</button>
+    </div>
+  </div>
+  
